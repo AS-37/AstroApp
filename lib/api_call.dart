@@ -15,8 +15,8 @@ class ApiCarte {
     final headers = {"Content-type": "application/json"};
     final json = {
       "observer": {
-        "latitude": 50.62925,
-        "longitude": 3.057256,
+        "latitude": 50.63341,
+        "longitude": 3.02004,
         "date": "2023-05-24"
       },
       "view": {
@@ -24,8 +24,8 @@ class ApiCarte {
         "parameters": {
           "position": {
             "equatorial": {
-              "rightAscension": 14.83,
-              "declination": -15.23
+              "rightAscension": 0,
+              "declination": 0
             }
           },
           "zoom": 3 //optional
