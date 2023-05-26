@@ -13,22 +13,23 @@ class ApiCarte {
 
     final url = Uri.parse('https://api.astronomyapi.com/api/v2/studio/star-chart');
     final headers = {"Content-type": "application/json"};
+    //declination = observer's latitude et right ascension = local sidereal time
     final json = {
       "observer": {
         "latitude": 50.63341,
         "longitude": 3.02004,
-        "date": "2017-05-24"
+        "date": "2023-05-26"
       },
       "view": {
         "type": "area",
         "parameters": {
           "position": {
             "equatorial": {
-              "rightAscension": 0,
-              "declination": 0
+              "rightAscension": 5.2225,
+              "declination": 50.63341
             }
           },
-          "zoom": 3 //optional
+          "zoom": 1 //optional
         }
       }
     };
