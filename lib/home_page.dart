@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'persistent_bottom_bar_scaffold.dart';
+import 'localAndWebObjectsView.dart';
 
 class HomePage extends StatelessWidget {
   final _tab1navigatorKey = GlobalKey<NavigatorState>();
@@ -51,9 +52,9 @@ class TabPage1 extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => Page1('Tab1')));
+                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
                 },
-                child: Text('Go to page1'))
+                child: Text('Display sky'))
           ],
         ),
       ),
