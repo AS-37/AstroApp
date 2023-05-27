@@ -34,19 +34,44 @@ class locationPage {
     }
   }
 
-  Future <String> GetLatitude() async{
+  Future <double> GetLatitude() async{
     Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
-    print(position.latitude); //Output: 29.6593457
-
-    return position.latitude.toString();
+    print(position.latitude); //Exemple output: 29.6593457
+    double d_latitude = await position.longitude;
+    double.parse((d_latitude).toStringAsFixed(4));
+    return position.latitude;
   }
 
-  Future <String> GetLongitude() async{
+  Future <double> GetLongitude() async{
     Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
-    print(position.longitude); //Output: 29.6593457
+    print(position.longitude);
+    double d_longitude = await position.longitude;
+    double.parse((d_longitude).toStringAsFixed(4));
+    return d_longitude;
+  }
 
-    return position.longitude.toString();
+  int daysBetween(DateTime from, DateTime to) {
+    from = DateTime(from.year, from.month, from.day);
+    to = DateTime(to.year, to.month, to.day);
+    return (to.difference(from).inHours / 24).round();
+  }
+
+  //Fonction pour calculer le local sidereal time nécessaire pour l'appel API qui reproduira la carte
+  Future <double> GetLST() async{
+
+    //on calcule le nombre de jour depuis l'an 2000
+    final birthday = DateTime(2000, 01, 01);
+    final date2 = DateTime.now();
+    final difference = daysBetween(birthday, date2);
+    int heures = DateTime.now().toUtc().hour;
+    print('Date :'+ DateTime.now().toString());
+    double long = await GetLongitude();
+    //formule pour calculer le local sidereal time
+    //LST = 100.46 + 0.985647 * d + long + 15*UT
+    double LST = 100.4606184+0.9856473662862*difference+15*23;
+    print('LST:'+LST.toString());
+    return LST;
   }
 }

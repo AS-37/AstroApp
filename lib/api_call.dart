@@ -1,6 +1,7 @@
 import 'dart:convert';
-
 import 'package:http/http.dart';
+import 'location_page.dart';
+import 'package:intl/intl.dart';
 
 class ApiCarte {
 
@@ -10,29 +11,39 @@ class ApiCarte {
     String basicAuth =
         'Basic ' + base64.encode(utf8.encode('$username:$password'));
     print(basicAuth);
-
+    locationPage locationInstance = new locationPage();
+    locationInstance.GetLST();
     final url = Uri.parse('https://api.astronomyapi.com/api/v2/studio/star-chart');
+
+    double long = await locationInstance.GetLongitude();
+    double lat = await locationInstance.GetLatitude();
+
+    var now = new DateTime.now();
+    var formatter = new DateFormat('yyyy-MM-dd');
+    String formattedDate = formatter.format(now);
+    print(formattedDate); // 2016-01-25
     final headers = {"Content-type": "application/json"};
     //declination = observer's latitude et right ascension = local sidereal time
     final json = {
       "observer": {
-        "latitude": 50.63341,
-        "longitude": 3.02004,
-        "date": "2023-05-26"
+        "latitude": lat,
+        "longitude": long,
+        "date": formattedDate
       },
       "view": {
         "type": "area",
         "parameters": {
           "position": {
             "equatorial": {
-              "rightAscension": 5.2225,
-              "declination": 50.63341
+              "rightAscension": 10.1821,
+              "declination": lat
             }
           },
-          "zoom": 1 //optional
+          "zoom": 2 //optional
         }
       }
     };
+    print(json);
     final response = await post(url, headers: <String, String>{'authorization': basicAuth}, body: JsonEncoder().convert(json));
     print('Status code: ${response.statusCode}');
     print('Body: ${response.body}');

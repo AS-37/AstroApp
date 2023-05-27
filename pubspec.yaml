@@ -32,11 +32,14 @@ dependencies:
   flutter:
     sdk: flutter
   ar_flutter_plugin: ^0.6.2
-  geolocator: ^8.0.0
+  geolocator: ^7.6.2
+  intl: ^0.18.1
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   http: ^0.13.5
+  satellite_dart: ^1.0.2
+  simple_3d_renderer: ^12.0.1
 
 dev_dependencies:
   flutter_test:
@@ -63,7 +66,6 @@ flutter:
   assets:
     - assets/triangle.png
     - assets/Chicken_01/
-    - assets/Pochita_01/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
