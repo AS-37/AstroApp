@@ -78,13 +78,13 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
   }
 
   Future<void> onLocalObjectButtonPressed() async {
-    if (localObjectNode != null) {
-      arObjectManager.removeNode(localObjectNode!);
-      localObjectNode = null;
+    if (webObjectNode != null) {
+      arObjectManager.removeNode(webObjectNode!);
+      webObjectNode = null;
     } else {
       var newNode = ARNode(
           type: NodeType.localGLTF2,
-          uri: "assets/Earth/Earth.glb",
+          uri: "assets/Chicken_01/Chicken_01.gltf",
           scale: Vector3(0.2, 0.2, 0.2),
           position: Vector3(0.0, 0.0, 0.0),
           rotation: Vector4(1.0, 0.0, 0.0, 0.0));
@@ -107,4 +107,6 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
       webObjectNode = (didAddWebNode!) ? newNode : null;
     }
   }
+
+
 }
