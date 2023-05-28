@@ -73,7 +73,7 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
       handleTaps: false,
     );
     this.arObjectManager.onInitialize();
-    onLocalObjectButtonPressed();
+    onWebObjectAtButtonPressed();
 
   }
 
@@ -101,7 +101,7 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
       var newNode = ARNode(
           type: NodeType.webGLB,
           uri:
-          "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Fox/glTF-Binary/Fox.glb",
+          "https://github.com/AS-37/AstroApp/raw/main/assets/earth/earth2.glb",
           scale: Vector3(0.2, 0.2, 0.2));
       bool? didAddWebNode = await arObjectManager.addNode(newNode);
       webObjectNode = (didAddWebNode!) ? newNode : null;
