@@ -74,6 +74,7 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
     );
     this.arObjectManager.onInitialize();
     onLocalObjectButtonPressed();
+
   }
 
   Future<void> onLocalObjectButtonPressed() async {
