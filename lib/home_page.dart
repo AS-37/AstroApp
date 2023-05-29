@@ -6,6 +6,7 @@ class HomePage extends StatelessWidget {
   final _tab1navigatorKey = GlobalKey<NavigatorState>();
   final _tab2navigatorKey = GlobalKey<NavigatorState>();
   final _tab3navigatorKey = GlobalKey<NavigatorState>();
+  LocalAndWebObjectsView localObjectView = new LocalAndWebObjectsView();
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +15,13 @@ class HomePage extends StatelessWidget {
         PersistentTabItem(
           tab: TabPage1(),
           icon: Icons.aod,
-          title: 'Sky',
+          title: 'Star Map',
           navigatorkey: _tab1navigatorKey,
         ),
         PersistentTabItem(
           tab: TabPage2(),
           icon: Icons.search,
-          title: 'Search',
+          title: 'Solar system',
           navigatorkey: _tab2navigatorKey,
         ),
         PersistentTabItem(
@@ -42,7 +43,7 @@ class TabPage1 extends StatelessWidget {
     print('TabPage1 build');
     return Scaffold(
       //backgroundColor: Colors.indigo[900],
-      appBar: AppBar(title: Text('Sky')),
+      appBar: AppBar(title: Text('Star Map')),
       body: Container(
         width: double.infinity,
         child: Column(
@@ -54,7 +55,7 @@ class TabPage1 extends StatelessWidget {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
                 },
-                child: Text('Display sky'))
+                child: Text('Display star map'))
           ],
         ),
       ),
@@ -73,13 +74,63 @@ class TabPage2 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Tab 2'),
+            Text('Pick a star from the solar system to view in AR'),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => Page2('tab2')));
+                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
                 },
-                child: Text('Go to page2'))
+                child: Text('Sun')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                },
+                child: Text('Mercury')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                },
+                child: Text('Venus')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                },
+                child: Text('Earth')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                },
+                child: Text('Mars')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                },
+                child: Text('Jupiter')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                },
+                child: Text('Saturn')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+
+                },
+                child: Text('Uranus')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+
+                },
+                child: Text('Neptune'))
           ],
         ),
       ),

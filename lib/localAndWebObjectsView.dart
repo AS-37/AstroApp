@@ -76,7 +76,7 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
     onWebObjectAtButtonPressed();
 
   }
-
+/*
   Future<void> onLocalObjectButtonPressed() async {
     if (webObjectNode != null) {
       arObjectManager.removeNode(webObjectNode!);
@@ -92,7 +92,7 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
       localObjectNode = (didAddLocalNode!) ? newNode : null;
     }
   }
-
+*/
   Future<void> onWebObjectAtButtonPressed() async {
     if (webObjectNode != null) {
       arObjectManager.removeNode(webObjectNode!);
@@ -101,8 +101,8 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
       var newNode = ARNode(
           type: NodeType.webGLB,
           uri:
-          "https://github.com/AS-37/AstroApp/raw/main/assets/earth/earth2.glb",
-          scale: Vector3(0.2, 0.2, 0.2));
+          "https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Sun.glb",
+          scale: Vector3(0.3, 0.3, 0.3));
       bool? didAddWebNode = await arObjectManager.addNode(newNode);
       webObjectNode = (didAddWebNode!) ? newNode : null;
     }
