@@ -10,7 +10,7 @@ You can view in AR stars from our solar system
 ## Resources and packages used:
 
 Astronomy API: https://docs.astronomyapi.com/endpoints/studio/star-chart (Star chart)  
-Github Actions for CI  
+Github Actions for CI/CD  
 flutter's test package for tests
 
 dart packages used:
