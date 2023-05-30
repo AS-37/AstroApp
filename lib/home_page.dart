@@ -6,7 +6,7 @@ class HomePage extends StatelessWidget {
   final _tab1navigatorKey = GlobalKey<NavigatorState>();
   final _tab2navigatorKey = GlobalKey<NavigatorState>();
   final _tab3navigatorKey = GlobalKey<NavigatorState>();
-  
+
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
         ),
         PersistentTabItem(
           tab: TabPage2(),
-          icon: Icons.search,
+          icon: Icons.sunny,
           title: 'Solar system',
           navigatorkey: _tab2navigatorKey,
         ),
@@ -68,7 +68,7 @@ class TabPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     print('TabPage2 build');
     return Scaffold(
-      appBar: AppBar(title: Text('Search')),
+      appBar: AppBar(title: Text('View our solar system in AR')),
       body: Container(
         width: double.infinity,
         child: Column(
@@ -102,8 +102,15 @@ class TabPage2 extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Moon.glb',)));
+                },
+                child: Text('Moon')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Mars.glb',)));
                 },
+
                 child: Text('Mars')),
             ElevatedButton(
                 onPressed: () {
