@@ -13,7 +13,7 @@ import 'package:http/http.dart';
 import 'package:geolocator/geolocator.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('TESTS', (WidgetTester tester) async {
     /*
     // Build our app and trigger a frame.
     await tester.pumpWidget(MyApp());
@@ -30,7 +30,7 @@ void main() {
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
     */
-    /*TESTS API ET BASIC AUTH
+    //TESTS API ET BASIC AUTH
     print('TESTS API ET BASIC AUTH');
     String username = '9a596bfe-ceb4-42e4-a64f-c03be692c8f8';
     String password = '318c4b8de827bb169c8c95169bf8228bf2892b30d3222417becaed1f195443dc5d6d3c3ed4337270f0907ed6c748fd13daef17a1f75b91d8ca1616bd38b371cdf854427757936e32cec5a92e7b2d652ded7684c761763d119c6f9cdb6b77050ee20208ad6ee9e914b83860c6417d4e71';
@@ -91,6 +91,6 @@ void main() {
         desiredAccuracy: LocationAccuracy.high);
     print(positionlat.latitude); //Exemple output: 29.6593457
     double d_latitude = await positionlong.longitude;
-*/
+
   });
 }
