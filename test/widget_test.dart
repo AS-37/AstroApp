@@ -76,6 +76,7 @@ void main() {
         desiredAccuracy: LocationAccuracy.high);
     print(positionlat.latitude); //Exemple output: 29.6593457
     double d_latitude = await positionlong.longitude;
-
+    expect(d_latitude,isNotNull);
+    expect(d_longitude,isNotNull);
   });
 }
