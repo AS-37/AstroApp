@@ -26,8 +26,8 @@ class HomePage extends StatelessWidget {
         ),
         PersistentTabItem(
           tab: TabPage3(),
-          icon: Icons.person,
-          title: 'Profile',
+          icon: Icons.stacked_bar_chart,
+          title: 'Stats',
           navigatorkey: _tab3navigatorKey,
         ),
       ],
