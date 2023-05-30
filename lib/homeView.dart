@@ -18,7 +18,7 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const LocalAndWebObjectsView()));
+                        builder: (context) => LocalAndWebObjectsView(name: '',)));
               },
               child: const Text("Local / Web Objects")),
         ));

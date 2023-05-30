@@ -67,7 +67,7 @@ flutter:
 
   assets:
     - assets/triangle.png
-    - assets/earth/
+    - assets/solar_system/
     - assets/carte_ciel.png
     - assets/Chicken_01/
   # To add assets to your application, add an assets section, like this:

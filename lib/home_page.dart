@@ -6,7 +6,7 @@ class HomePage extends StatelessWidget {
   final _tab1navigatorKey = GlobalKey<NavigatorState>();
   final _tab2navigatorKey = GlobalKey<NavigatorState>();
   final _tab3navigatorKey = GlobalKey<NavigatorState>();
-  LocalAndWebObjectsView localObjectView = new LocalAndWebObjectsView();
+  
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class TabPage1 extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Sun.glb',)));
                 },
                 child: Text('Display star map'))
           ],
@@ -78,56 +78,56 @@ class TabPage2 extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Sun.glb',)));
                 },
                 child: Text('Sun')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Mercury.glb',)));
                 },
                 child: Text('Mercury')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Venus.glb',)));
                 },
                 child: Text('Venus')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Earth.glb',)));
                 },
                 child: Text('Earth')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Mars.glb',)));
                 },
                 child: Text('Mars')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Jupiter.glb',)));
                 },
                 child: Text('Jupiter')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Saturn.glb',)));
                 },
                 child: Text('Saturn')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Uranus.glb',)));
 
                 },
                 child: Text('Uranus')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const LocalAndWebObjectsView()));
+                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Neptune.glb',)));
 
                 },
                 child: Text('Neptune'))

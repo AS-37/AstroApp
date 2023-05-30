@@ -9,13 +9,21 @@ import 'package:flutter/material.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 class LocalAndWebObjectsView extends StatefulWidget {
-  const LocalAndWebObjectsView({Key? key}) : super(key: key);
+  String namePlanet = '';
+  LocalAndWebObjectsView({Key? key, required String name}) : super(key: key){
+    namePlanet = name;
+  }
 
   @override
-  State<LocalAndWebObjectsView> createState() => _LocalAndWebObjectsViewState();
+  State<LocalAndWebObjectsView> createState() => _LocalAndWebObjectsViewState(namePlanet);
+
 }
 
 class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
+  _LocalAndWebObjectsViewState(String namePlanet){
+    nameP = namePlanet;
+  }
+  String nameP = '';
   late ARSessionManager arSessionManager;
   late ARObjectManager arObjectManager;
 
@@ -73,7 +81,7 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
       handleTaps: false,
     );
     this.arObjectManager.onInitialize();
-    onWebObjectAtButtonPressed();
+    onWebObjectAtButtonPressed(nameP);
 
   }
 /*
@@ -93,7 +101,7 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
     }
   }
 */
-  Future<void> onWebObjectAtButtonPressed() async {
+  Future<void> onWebObjectAtButtonPressed(String namePlanet) async {
     if (webObjectNode != null) {
       arObjectManager.removeNode(webObjectNode!);
       webObjectNode = null;
@@ -101,7 +109,8 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
       var newNode = ARNode(
           type: NodeType.webGLB,
           uri:
-          "https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Sun.glb",
+          //"https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Sun.glb"
+          namePlanet,
           scale: Vector3(0.3, 0.3, 0.3));
       bool? didAddWebNode = await arObjectManager.addNode(newNode);
       webObjectNode = (didAddWebNode!) ? newNode : null;
