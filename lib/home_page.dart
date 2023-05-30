@@ -49,7 +49,7 @@ class TabPage1 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Tab 1'),
+            Text(''),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
@@ -137,7 +137,14 @@ class TabPage2 extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Neptune.glb',)));
 
                 },
-                child: Text('Neptune'))
+                child: Text('Neptune')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/solar_system.glb',)));
+
+                },
+                child: Text('Whole solar system'))
           ],
         ),
       ),
