@@ -43,7 +43,7 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Local / Web Objects"),
+        title: const Text("AR Viewer"),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),

@@ -12,7 +12,7 @@ class ApiCarte {
         'Basic ' + base64.encode(utf8.encode('$username:$password'));
     print(basicAuth);
     locationPage locationInstance = new locationPage();
-    locationInstance.GetLST();
+    double LST = await locationInstance.GetLST();
     final url = Uri.parse('https://api.astronomyapi.com/api/v2/studio/star-chart');
 
     double long = await locationInstance.GetLongitude();
@@ -35,7 +35,7 @@ class ApiCarte {
         "parameters": {
           "position": {
             "equatorial": {
-              "rightAscension": 10.1821,
+              "rightAscension": LST,
               "declination": lat
             }
           },
