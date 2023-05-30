@@ -29,10 +29,7 @@ jobs:
 
       - name: Build Android APK
         run: flutter build apk
-
-      - name: Build iOS Archive
-        run: flutter build ios --release --no-codesign
-
+        
       - name: Archive Outputs
         uses: actions/upload-artifact@v2
         with:
@@ -66,9 +63,6 @@ jobs:
         with:
           name: app-bundle
           path: build/app/outputs/bundle/release/app.aab
-
-      - name: Build iOS Archive
-        run: flutter build ios --release --no-codesign
 
       - name: Archive Outputs
         uses: actions/upload-artifact@v2
