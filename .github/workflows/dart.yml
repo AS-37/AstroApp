@@ -63,9 +63,3 @@ jobs:
         with:
           name: app-bundle
           path: build/app/outputs/bundle/release/app.aab
-
-      - name: Archive Outputs
-        uses: actions/upload-artifact@v2
-        with:
-          name: app-release
-          path: build/ios/archive/Runner.xcarchive
