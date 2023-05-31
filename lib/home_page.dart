@@ -158,7 +158,7 @@ class TabPage3 extends StatelessWidget {
   Widget build(BuildContext context) {
     print('TabPage3 build');
     return Scaffold(
-      appBar: AppBar(title: Text('Profile')),
+      appBar: AppBar(title: Text('Today')),
       body: Container(
         width: double.infinity,
         child: Column(
