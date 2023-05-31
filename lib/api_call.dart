@@ -36,7 +36,7 @@ class ApiCarte {
         "parameters": {
           "position": {
             "equatorial": {
-              "rightAscension": LST,
+              "rightAscension": 10.1821,
               "declination": lat
             }
           },
@@ -48,7 +48,9 @@ class ApiCarte {
     final response = await post(url, headers: <String, String>{'authorization': basicAuth}, body: JsonEncoder().convert(json));
     print('Status code: ${response.statusCode}');
     print('Body: ${response.body}');
-    imgurl = response.body.
+    var jsonResponse = jsonDecode(response.body);
+    imgurl = jsonResponse['data']['imageUrl'];
+    //print(imgurl);
     return imgurl;
 
   }

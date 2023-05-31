@@ -3,8 +3,8 @@ import 'home_page.dart';
 import 'api_call.dart';
 void main() {
   runApp(MyApp());
-  ApiCarte callapi = new ApiCarte();
-  callapi.makePostRequest();
+  //ApiCarte callapi = new ApiCarte();
+  //callapi.makePostRequest();
 }
 
 class MyApp extends StatelessWidget {

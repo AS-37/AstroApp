@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'persistent_bottom_bar_scaffold.dart';
 import 'localAndWebObjectsView.dart';
+import '3d_sky.dart';
+
 
 class HomePage extends StatelessWidget {
   final _tab1navigatorKey = GlobalKey<NavigatorState>();
   final _tab2navigatorKey = GlobalKey<NavigatorState>();
   final _tab3navigatorKey = GlobalKey<NavigatorState>();
-
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +54,7 @@ class TabPage1 extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Sun.glb',)));
+                      MaterialPageRoute(builder: (context) => SkyMap()));
                 },
                 child: Text('Display star map'))
           ],
