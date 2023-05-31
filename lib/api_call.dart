@@ -36,7 +36,7 @@ class ApiCarte {
         "parameters": {
           "position": {
             "equatorial": {
-              "rightAscension": 10.1821,
+              "rightAscension": LST,
               "declination": lat
             }
           },
