@@ -1,12 +1,12 @@
 # Astroapp
-## User documentation:
+## Documentation:
 AstroApp consists in 3 main features:
 -Generate a map of the sky based on user location and time
 -View stars from the solar system in augmented reality
 -Statistics and facts of each star in our solar system
 
 Those 3 features are accessible in the bottom navigation bar:
-![alt text](https://cdn.discordapp.com/attachments/1127726558002561026/1127733326665498674/ezgif-2-e36d941491.png?width=400&height=889)
+![alt text](https://media.discordapp.net/attachments/1127726558002561026/1127749271396036628/image.png?width=843&height=105)
 
 An augmented reality flutter AP  
 AstroApp is an AR app displaying the current stars visible in the sky based on user's location and date.  
