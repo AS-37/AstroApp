@@ -6,7 +6,11 @@ AstroApp consists in 3 main features:
 -Statistics and facts of each star in our solar system
 
 Those 3 features are accessible in the bottom navigation bar:  
-![alt text](https://media.discordapp.net/attachments/1127726558002561026/1127749271396036628/image.png?width=843&height=105)
+![alt text](https://media.discordapp.net/attachments/1127726558002561026/1127749271396036628/image.png?width=843&height=105)  
+
+Statistics:  
+<img width="280" alt="image" src="https://github.com/AS-37/AstroApp/assets/72209227/be7a9dad-a6b7-48c7-a5d8-bfdefd8be5b1">
+
 
 An augmented reality flutter AP  
 AstroApp is an AR app displaying the current stars visible in the sky based on user's location and date.  
