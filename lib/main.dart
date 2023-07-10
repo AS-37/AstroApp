@@ -12,9 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'AstroApp',
-      theme: ThemeData(primarySwatch: Colors.indigo),
+      theme: ThemeData( primaryColor: Colors.black),
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
 }
+

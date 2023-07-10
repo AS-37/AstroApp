@@ -71,7 +71,7 @@ class locationPage {
     //formule pour calculer le local sidereal time
     //LST = 100.46 + 0.985647 * d + long + 15*UT
     double LST = (100.4606184+0.9856473662862*difference+15*heures)/1000;
-    print('LST:'+LST.toString());
+    //print('LST:'+LST.toString());
     return LST;
   }
 }

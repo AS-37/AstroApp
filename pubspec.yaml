@@ -41,6 +41,14 @@ dependencies:
   satellite_dart: ^1.0.2
   simple_3d_renderer: ^12.0.1
   arcore_flutter_plugin: ^0.1.0
+  google_fonts: ^2.3.1
+  flutter_screenutil: ^5.3.1
+  delayed_display: ^2.0.0
+  carousel_slider: ^4.0.0
+  auto_size_text: ^3.0.0
+  bottom_sheet: ^2.0.0
+  easy_rich_text: ^1.0.4
+  url_launcher: ^6.0.20
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +74,9 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/
+    - assets/img_planets/
+    - assets/icons/
     - assets/triangle.png
     - assets/solar_system/
     - assets/carte_ciel.png

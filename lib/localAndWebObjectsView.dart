@@ -6,7 +6,7 @@ import 'package:ar_flutter_plugin/managers/ar_object_manager.dart';
 import 'package:ar_flutter_plugin/managers/ar_session_manager.dart';
 import 'package:ar_flutter_plugin/models/ar_node.dart';
 import 'package:flutter/material.dart';
-import 'package:vector_math/vector_math_64.dart';
+import 'package:vector_math/vector_math_64.dart' as mat;
 
 class LocalAndWebObjectsView extends StatefulWidget {
   String namePlanet = '';
@@ -44,6 +44,7 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("AR Viewer"),
+        backgroundColor: Colors.black,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -111,7 +112,7 @@ class _LocalAndWebObjectsViewState extends State<LocalAndWebObjectsView> {
           uri:
           //"https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Sun.glb"
           namePlanet,
-          scale: Vector3(0.3, 0.3, 0.3));
+          scale: mat.Vector3(0.3, 0.3, 0.3));
       bool? didAddWebNode = await arObjectManager.addNode(newNode);
       webObjectNode = (didAddWebNode!) ? newNode : null;
     }

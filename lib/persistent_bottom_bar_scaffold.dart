@@ -50,7 +50,8 @@ class _PersistentBottomBarScaffoldState
 
 
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.indigo[900],
+          backgroundColor: Colors.white,
+          selectedItemColor: Colors.black,
           currentIndex: _selectedTab,
           onTap: (index) {
 

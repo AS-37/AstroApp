@@ -1,6 +1,10 @@
+import 'package:astroapp/screens/home/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'persistent_bottom_bar_scaffold.dart';
 import 'localAndWebObjectsView.dart';
+import 'dart:ui';
 import '3d_sky.dart';
 
 
@@ -16,19 +20,19 @@ class HomePage extends StatelessWidget {
         PersistentTabItem(
           tab: TabPage1(),
           icon: Icons.aod,
-          title: 'Star Map',
+          title: 'STAR MAP',
           navigatorkey: _tab1navigatorKey,
         ),
         PersistentTabItem(
           tab: TabPage2(),
           icon: Icons.sunny,
-          title: 'Solar system',
+          title: 'SOLAR SYSTEM',
           navigatorkey: _tab2navigatorKey,
         ),
         PersistentTabItem(
           tab: TabPage3(),
           icon: Icons.stacked_bar_chart,
-          title: 'Stats',
+          title: 'STATS AND FACTS',
           navigatorkey: _tab3navigatorKey,
         ),
       ],
@@ -44,7 +48,7 @@ class TabPage1 extends StatelessWidget {
     print('TabPage1 build');
     return Scaffold(
       //backgroundColor: Colors.indigo[900],
-      appBar: AppBar(title: Text('Star Map')),
+      appBar: AppBar(title: Text('STAR MAP'), backgroundColor: Colors.black),
       body: Container(
         width: double.infinity,
         child: Column(
@@ -52,6 +56,9 @@ class TabPage1 extends StatelessWidget {
           children: [
             Text(''),
             ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+              ),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => SkyMap()));
@@ -69,7 +76,7 @@ class TabPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     print('TabPage2 build');
     return Scaffold(
-      appBar: AppBar(title: Text('View our solar system in AR')),
+      appBar: AppBar(title: Text('SOLAR SYSTEM IN AR'), backgroundColor: Colors.black),
       body: Container(
         width: double.infinity,
         child: Column(
@@ -77,75 +84,109 @@ class TabPage2 extends StatelessWidget {
           children: [
             Text('Pick a star from the solar system to view in AR'),
             ElevatedButton(
+                style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+            ),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Sun.glb',)));
                 },
-                child: Text('Sun')),
+                child: Text('SUN')),
             ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                ),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Mercury.glb',)));
                 },
-                child: Text('Mercury')),
+                child: Text('MERCURY')),
             ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                ),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Venus.glb',)));
                 },
-                child: Text('Venus')),
+                child: Text('VENUS')),
             ElevatedButton(
+                style: ButtonStyle(
+
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                ),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Earth.glb',)));
                 },
-                child: Text('Earth')),
+                child: Text('EARTH')),
             ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                ),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Moon.glb',)));
                 },
-                child: Text('Moon')),
+                child: Text('MOON')),
             ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                ),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Mars.glb',)));
                 },
 
-                child: Text('Mars')),
+                child: Text('MARS')),
             ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                ),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Jupiter.glb',)));
                 },
-                child: Text('Jupiter')),
+                child: Text('JUPITER')),
             ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                ),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Saturn.glb',)));
                 },
-                child: Text('Saturn')),
+                child: Text('SATURN')),
             ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                ),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Uranus.glb',)));
 
                 },
-                child: Text('Uranus')),
+                child: Text('URANUS')),
             ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                ),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/Neptune.glb',)));
 
                 },
-                child: Text('Neptune')),
+                child: Text('NEPTUNE')),
             ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                ),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LocalAndWebObjectsView(name: 'https://github.com/AS-37/AstroApp/raw/main/assets/solar_system/solar_system.glb',)));
 
                 },
-                child: Text('Whole solar system'))
+                child: Text('WHOLE SOLAR SYSTEM'))
           ],
         ),
       ),
@@ -157,22 +198,27 @@ class TabPage3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print('TabPage3 build');
-    return Scaffold(
-      appBar: AppBar(title: Text('Today')),
-      body: Container(
-        width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Tab 3'),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => Page2('tab3')));
-                },
-                child: Text('Go to page2'))
-          ],
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (BuildContext context,child) => MaterialApp(
+        title: 'Planets',
+        debugShowCheckedModeBanner: false,
+        builder: (context, widget) {
+          ScreenUtil.init(context);
+          return MediaQuery(
+            data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+            child: widget!,
+          );
+        },
+        theme: ThemeData(
+          primarySwatch: Colors.grey,
+          textTheme: GoogleFonts.tekoTextTheme(
+            Theme.of(context).textTheme,
+          ),
         ),
+        home: const HomeScreen(),
       ),
     );
   }
