@@ -16,7 +16,8 @@ Map of the sky:
 <img width="279" alt="image" src="https://github.com/AS-37/AstroApp/assets/72209227/4b69a4cf-3fbf-4d7b-82e3-ec94f45e392d">  
 
 Augmented reality:  
-![image](https://github.com/AS-37/AstroApp/assets/72209227/b41e2572-9258-4245-b29a-8c8125fb3e49)
+![image](https://github.com/AS-37/AstroApp/assets/72209227/03fec28f-c18b-4ef5-9669-f0774d66b23c)
+
 
 
 
